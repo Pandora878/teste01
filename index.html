@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Ícones do Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <div class="wrapper">
+        <form id="login-form">
+            <h1>Login</h1>
+
+            <!-- Campo Nome -->
+            <div class="input-box">
+                <input type="text" id="login-nome" placeholder="Nome" required>
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <!-- Campo Senha -->
+            <div class="input-box">
+                <input type="password" id="login-senha" placeholder="Senha" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <!-- Botão de Login -->
+            <button type="submit" class="btn">Entrar</button>
+
+            <!-- Link para Cadastro -->
+            <div class="Register-link">
+                <p>Ainda não tem uma conta? <a href="register.html">Cadastre-se</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            let nome = document.getElementById("login-nome").value;
+            let senha = document.getElementById("login-senha").value;
+
+            if (nome === "" || senha === "") {
+                alert("Por favor, preencha todos os campos!");
+                return;
+            }
+
+            // Simula um login bem-sucedido (pode ser ajustado para um backend real)
+            alert("Login realizado com sucesso!");
+            window.location.href = "pgprinci.html"; // Redireciona para a página principal
+        });
+    </script>
+
+</body>
+</html>

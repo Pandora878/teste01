@@ -1,0 +1,206 @@
+/* Estilos para o Poppins */
+.poppins-black-italic {
+    font-family: "Poppins", serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* Estilos gerais para reset de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inconsolata", serif;
+}
+
+/* Centralização do body usando flexbox */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("gif..gif");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilos para o container do formulário */
+.wrapper {
+    width: 100%;
+    max-width: 420px;  /* Ajustado para responsividade */
+    background: rgba(255, 255, 255, 0.153);  /* Fundo transparente com leve opacidade */
+    color: #ffffff;
+    padding: 20px 30px;  /* Aumentado o padding lateral e reduzido o padding superior */
+    border-radius: 20px;  /* Aumentado para bordas mais arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Adicionado sombreado */
+    backdrop-filter: blur(10px);  /* Efeito de desfoque no fundo */
+    -webkit-backdrop-filter: blur(10px); /* Suporte para Safari */
+    max-height: 80vh;  /* Limita a altura máxima */
+    display: flex;
+    flex-direction: column;  /* Permite que os elementos fiquem mais verticais */
+    justify-content: space-between;  /* Dá mais espaço para o conteúdo verticalmente */
+}
+
+/* Estilos para o título do formulário */
+.wrapper h1 {
+    font-size: 30px;  /* Tamanho da fonte menor */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Estilos para as caixas de entrada */
+.wrapper .input-box {
+    width: 100%;
+    height: 40px;  /* Diminuído a altura da caixa */
+    background: rgb(255, 255, 255);
+    margin: 10px 0;  /* Diminuído o espaçamento entre as caixas */
+    position: relative;  /* Adicionado para o posicionamento do ícone */
+    border-radius: 25px;
+    display: flex;
+    align-items: center;  /* Alinha os elementos dentro da caixa */
+    padding: 0 15px;
+    backdrop-filter: blur(5px); /* Leve desfoque nas caixas de entrada */
+}
+
+/* Estilos para o input dentro da caixa */
+.wrapper .input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    font-size: 16px;  /* Menor tamanho da fonte */
+    color: #000000;
+    padding-left: 30px;  /* Adiciona espaçamento à esquerda para o ícone */
+}
+
+/* Estilos para o ícone dentro da caixa de entrada */
+.input-box i {
+    position: absolute;
+    right: 15px;  /* Ajustado para melhor alinhamento */
+    font-size: 20px;
+    color: #ffffff;
+}
+
+/* Estilos para o botão de login */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #ffffff;
+    border: none;
+    border-radius: 25px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px;  /* Diminuído o espaçamento superior */
+}
+
+button:hover {
+    background: #ffffff;  /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos para o link de registro */
+.Register-link {
+    text-align: center;
+    margin-top: 10px;  /* Diminuído o espaçamento superior */
+}
+
+.Register-link a {
+    color: #ffffff;  /* Alterado para cor branca */
+    text-decoration: none;
+}
+
+.Register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para os links de "Lembre de mim" e "Esqueceu a senha" */
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;  /* Separar os itens com espaço */
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* "Lembre de mim" */
+.wrapper .remember-forgot label {
+    color: rgb(255, 255, 255);
+}
+
+/* Link "Esqueceu a senha?" */
+.wrapper .forgot-password {
+    color: #ffffff;  /* Cor branca para o link */
+    text-decoration: none;
+}
+
+.wrapper .forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Media Query para telas pequenas (celulares) */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 15px;
+        width: 90%;
+        max-width: 100%;
+        height: auto; /* Ajuste para evitar que o conteúdo ultrapasse a tela */
+    }
+
+    .wrapper h1 {
+        font-size: 28px;
+    }
+
+    .wrapper .input-box {
+        height: 45px;  /* Ajuste a altura da caixa de entrada */
+    }
+
+    .wrapper .input-box input {
+        font-size: 14px;
+        padding-left: 25px;  /* Ajusta o espaçamento à esquerda para o ícone */
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .Register-link p {
+        font-size: 14px;
+    }
+
+    .wrapper .remember-forgot {
+        flex-direction: column;  /* Empilha os itens verticalmente em telas menores */
+        align-items: flex-start;
+    }
+
+    .wrapper .remember-forgot label,
+    .wrapper .forgot-password {
+        font-size: 14px;  /* Reduz o tamanho da fonte */
+    }
+}
+
+/* Media Query para telas muito pequenas (dispositivos móveis menores) */
+@media (max-width: 480px) {
+    .wrapper h1 {
+        font-size: 24px;  /* Reduz o título para se ajustar melhor */
+    }
+
+    .wrapper .input-box {
+        height: 35px;  /* Ajusta ainda mais a altura das caixas de entrada */
+    }
+
+    .wrapper .input-box input {
+        font-size: 13px;
+        padding-left: 20px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .Register-link p {
+        font-size: 12px;
+    }
+}

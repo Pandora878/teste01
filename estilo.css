@@ -1,0 +1,140 @@
+/* Estilos gerais para o layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo de fundo e layout centralizado */
+body {
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 20px;
+}
+
+/* Wrapper principal */
+.wrapper {
+    width: 100%;
+    max-width: 700px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #262626;
+}
+
+/* Botão de criar post */
+.new-post-btn {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.new-post-btn .btn {
+    padding: 12px 30px;
+    background-color: #3897f0;
+    color: white;
+    border-radius: 30px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.new-post-btn .btn:hover {
+    background-color: #2874cc;
+}
+
+/* Posts container */
+.posts-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+/* Estilo para cada post */
+.post {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.post:hover {
+    transform: scale(1.02);
+}
+
+/* Imagem do post - Definindo as dimensões padronizadas */
+.post-image {
+    width: 100%;
+    height: 250px;  /* Tamanho fixo para altura da imagem */
+    object-fit: cover;  /* A imagem vai cobrir a área sem distorcer */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Título do post */
+.post-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #262626;
+    margin-bottom: 10px;
+}
+
+/* Conteúdo do post */
+.post-content {
+    font-size: 16px;
+    color: #8e8e8e;
+    margin-bottom: 15px;
+}
+
+/* Botão de "Ver Mais" */
+.post a.btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #3897f0;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.post a.btn:hover {
+    background-color: #2874cc;
+}
+
+/* Resumo de como o layout deve se comportar */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 15px;
+    }
+
+    .post-title {
+        font-size: 20px;
+    }
+
+    .post-content {
+        font-size: 14px;
+    }
+
+    .post a.btn {
+        font-size: 12px;
+    }
+}

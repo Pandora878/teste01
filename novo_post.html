@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - JubsSite</title>
+    <link rel="stylesheet" href="post.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- Cabeçalho com logo e título -->
+        <div class="header">
+            <h1>JubsSite</h1>
+        </div>
+
+        <!-- Botão para criar novo post -->
+        <div class="new-post-btn">
+            <a href="criar-post.html" class="btn">Criar Novo Post</a>
+        </div>
+
+        <!-- Seção de posts -->
+        <div class="posts-container">
+            <!-- Exemplo de post dinâmico -->
+            <div class="post">
+                <img src="https://via.placeholder.com/600x400" alt="Imagem do Post" class="post-image">
+                <h2 class="post-title">Título do Post</h2>
+                <p class="post-content">Este é um exemplo de conteúdo do post. Clique para ler mais...</p>
+                <a href="post.html" class="btn">Ver Mais</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Função para adicionar post dinâmico ao carregar a página
+        document.addEventListener("DOMContentLoaded", function() {
+            const storedPost = localStorage.getItem("newPost");
+            if (storedPost) {
+                const postData = JSON.parse(storedPost);
+                const postsContainer = document.querySelector(".posts-container");
+
+                const postElement = document.createElement("div");
+                postElement.classList.add("post");
+
+                const postImage = document.createElement("img");
+                postImage.src = postData.image;
+                postImage.classList.add("post-image");
+
+                const postTitle = document.createElement("h2");
+                postTitle.classList.add("post-title");
+                postTitle.textContent = postData.title;
+
+                const postContent = document.createElement("p");
+                postContent.classList.add("post-content");
+                postContent.textContent = postData.content.substring(0, 100) + "...";
+
+                const postLink = document.createElement("a");
+                postLink.href = "post.html";
+                postLink.classList.add("btn");
+                postLink.textContent = "Ver Mais";
+
+                postElement.appendChild(postImage);
+                postElement.appendChild(postTitle);
+                postElement.appendChild(postContent);
+                postElement.appendChild(postLink);
+
+                postsContainer.appendChild(postElement);
+            }
+        });
+    </script>
+
+</body>
+</html>

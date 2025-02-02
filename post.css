@@ -1,0 +1,211 @@
+/* Resetando algumas margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    line-height: 1.6;
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 2.5em;
+    color: #fff;
+    margin: 0;
+}
+/* Estilo para a lista de navegação */
+nav ul {
+    list-style: none; /* Remove os pontos antes dos itens */
+    display: flex;    /* Utiliza flexbox para dispor os itens horizontalmente */
+    justify-content: center; /* Alinha os itens ao centro */
+    padding: 0;       /* Remove o padding padrão da lista */
+    margin: 0;        /* Remove a margem padrão da lista */
+}
+
+nav ul li {
+    margin: 0 20px; /* Espaçamento entre os itens */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #fff;           /* Cor do texto */
+    font-size: 1.1em;      /* Tamanho da fonte */
+    padding: 10px 15px;    /* Padding dentro do link para aumentar a área clicável */
+    border-radius: 5px;    /* Borda arredondada */
+    transition: background-color 0.3s ease; /* Transição suave para o efeito de hover */
+}
+nav {
+    margin-top: 104px; /* Adiciona 50px de espaço acima do menu */
+}
+
+nav ul li a:hover {
+    background-color: #800080; /* Cor de fundo ao passar o mouse */
+}
+
+/* Corpo da página */
+.main-content {
+    padding: 20px;
+}
+
+.feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilização do Post */
+.post {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    width: 500px;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info .avatar {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.username {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.btn {
+    background-color: #800080;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #660066;
+}
+
+.post-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.post-caption {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #ddd;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    color: #fff;
+}
+
+/* Menu Lateral */
+.side-menu {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.side-menu .btn {
+    display: block;
+    margin-bottom: 15px;
+    width: 150px;
+    text-align: center;
+}
+
+/* Estilos adicionais para o botão lateral */
+.side-menu .btn:hover {
+    background-color: #660066;
+}
+
+/* Estilo para a lista de navegação no lado esquerdo */
+nav {
+    position: fixed; /* Fixa o menu à esquerda */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px; /* Largura do menu lateral */
+    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo */
+    display: flex;
+    flex-direction: column; /* Itens em coluna */
+    justify-content: flex-start; /* Alinha os itens no topo */
+    padding-top: 20px; /* Espaçamento do topo */
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3); /* Sombra lateral */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Organiza a lista verticalmente */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+}
+
+nav ul li {
+    width: 100%; /* Faz os itens de lista ocuparem toda a largura do menu */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em; /* Ajuste o tamanho da fonte */
+    padding: 12px 20px; /* Padding dentro dos links */
+    width: 100%; /* Faz o link ocupar toda a largura */
+    display: block; /* Torna o link um bloco para ocupar a largura inteira */
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #800080; /* Cor de fundo ao passar o mouse */
+}
